@@ -1,42 +1,48 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     border: solid 5px black;
     background-color: lightslategray;
-  }
-  
-  header {
+}
+
+header {
     background-color: #f0f0f0;
     padding: 20px;
     text-align: center;
     font-size: 30px;
     color: white;
     background-color: darkslategray;
-  }
-  
-  h1 {
+    border-bottom: solid 5px black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
     margin: 0;
-  }
-  
-  form {
+}
+
+form {
     margin-top: 10px;
-  }
-  
-  input[type="text"] {
+}
+
+input[type="text"] {
     padding: 5px;
-  }
-  
-  button {
+}
+
+button {
     padding: 5px 10px;
-  }
-  
-  main {
+}
+
+main {
     padding: 20px;
     background-color: lightslategray;
-  }
-  
-  #current-weather {
+}
+
+#current-weather {
     margin-bottom: 20px;
     padding: 20px;
     background-color: darkslategrey;
@@ -44,13 +50,14 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  
-  #current-weather h2 {
+    border: solid 5px black;
+}
+
+#current-weather h2 {
     font-size: 32px;
-  }
-  
-  #forecast {
+}
+
+#forecast {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -60,13 +67,18 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 20px;
     color: white;
-  }
-  
-  #forecast h2 {
+    border: solid 5px black;
+}
+
+.forecast-item p {
+    line-height: 1.75;
+}
+
+#forecast h2 {
     margin-top: 0;
-  }
-  
-  .forecast-item {
+}
+
+.forecast-item {
     flex-basis: calc(20% - 20px);
     margin-bottom: 20px;
     padding: 20px;
@@ -74,35 +86,35 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     color: white;
-  }
-  
-  .forecast-item p {
+}
+
+.forecast-item p {
     margin: 0;
-  }
-  
-  footer {
+}
+
+footer {
     background-color: darkslateblue;
     padding: 20px;
     color: white;
     align-self: center;
-    width: 
-  }
-  
-  h2 {
+    border-top: solid 5px black;
+}
+
+h2 {
     margin: 0;
-  }
-  
-  ul {
+}
+
+ul {
     padding: 0;
     list-style-type: none;
-  }
-  
-  li {
+}
+
+li {
     margin-bottom: 5px;
     cursor: pointer;
-  }
-  
-  li.search-history-item {
+}
+
+li.search-history-item {
     background-color: darkslategray;
     padding: 5px;
     border-radius: 5px;
@@ -110,4 +122,39 @@ body {
     color: white;
     font-size: 30px;
     text-align: center;
-  }
+}
+
+#search-button {
+    background-color: seagreen;
+    border-radius: 5px;
+    border: solid 5px black;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+#search-button:hover {
+    background-color: darkgreen;
+}
+
+#city-input {
+    border-radius: 5px;
+    border: solid 5px black;
+    font-size: 15px;
+    text-align: center;
+    height: 30px;
+    width: 200px;
+}
+
+#clear-history-button {
+    background-color: saddlebrown;
+    border-radius: 5px;
+    border: solid 5px black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#clear-history-button:hover {
+    background-color: darkred;
+}
