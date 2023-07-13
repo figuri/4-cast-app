@@ -10,18 +10,22 @@
     <header>
         <h1>Weather Dashboard</h1>
         <form id="search-form">
-            <input type="text" id="search-input" placeholder="Search for a city">
+            <input type="text" id="city-input" placeholder="Enter a city">
             <button type="submit" id="search-button">Search</button>
         </form>
     </header>
     <main>
         <div id="current-weather"></div>
-        <div id="forecast"></div>
+        <div id="forecast">
+            <h2>5-Day Forecast:</h2>
+            <div id="forecast-cards"></div>
+        </div>
     </main>
     <footer>
         <h2>Search History</h2>
         <ul id="search-history"></ul>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
