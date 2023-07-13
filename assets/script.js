@@ -15,4 +15,42 @@ searchForm.addEventListener('submit', function (e) {
     }
 });
 
+ searchHistory.addEventListener('click', function (e) {
+    const cityName = e.target.textContent;
+    if (cityName) {
+        getWeather(cityName);
+    }
+});
+
+function getWeather(city) {
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=imperial`;
+
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        const forecastData = data.list;
+        
+        forecast.innerHTML = '<h2>5-Day Forecast</h2>';
+        for (let i = 0; i < forecastData.length; i += 8) {
+            const { dt_txt, main: { temp, humidity } } = forecastData[i];
+            const forecastDate = new Date(dt * 1000).toLocaleDateString('en-US');
+            const iconUrl = `https://openweathermap.org/img/wn/${forecastData[i].weather[0].icon}.png`;
+
+            const forecastItem = document.createElement('div');
+            forecastItem.classList.add('forecast-item');
+            forecastItem.innerHTML = `
+            <p>${forecastDate}</p>
+            <img src="${iconUrl}" alt="${forecastData[i].weather[0].description}" />
+            <p>Temperature: ${Math.round(main.temp)} &deg;F</p>
+            <p>Humidity: ${humidity}%</p>
+            <p>Wind Speed: ${wind.speed} MPH</p>
+            `;
+            forecast.appendChild(forecastItem);
+        }
+    });
+    .catch(err => {
+        console.error("Error: ", error);
+    });
+}
+
 
