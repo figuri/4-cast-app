@@ -2,57 +2,112 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
+    border: solid 5px black;
+    background-color: lightslategray;
+  }
+  
+  header {
     background-color: #f0f0f0;
     padding: 20px;
-}
-
-h1 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: darkslategray;
+  }
+  
+  h1 {
     margin: 0;
-}
-
-form {
+  }
+  
+  form {
     margin-top: 10px;
-}
-
-input[type="text"] {
+  }
+  
+  input[type="text"] {
     padding: 5px;
-}
-
-button {
+  }
+  
+  button {
     padding: 5px 10px;
-}
-
-main {
+  }
+  
+  main {
     padding: 20px;
-}
-
-#current-weather {
+    background-color: lightslategray;
+  }
+  
+  #current-weather {
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: darkslategrey;
     border-radius: 5px;
-}
-
-#forecast {
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    padding: 20px;
-}
-
-#forecast h2 {
-    margin-top: 0;
-}
-
-.forecast-item {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  #current-weather h2 {
+    font-size: 32px;
+  }
+  
+  #forecast {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.forecast-item p {
-    margin: 5px;
-}
+    margin-top: 20px;
+    background-color: darkslateblue;
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    color: white;
+  }
+  
+  #forecast h2 {
+    margin-top: 0;
+  }
+  
+  .forecast-item {
+    flex-basis: calc(20% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: darkslategrey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .forecast-item p {
+    margin: 0;
+  }
+  
+  footer {
+    background-color: darkslateblue;
+    padding: 20px;
+    color: white;
+    align-self: center;
+    width: 
+  }
+  
+  h2 {
+    margin: 0;
+  }
+  
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  li.search-history-item {
+    background-color: darkslategray;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 5px black;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+  }
